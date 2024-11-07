@@ -15,15 +15,19 @@
             <br><br>
             <label for="laufzeitid">Laufzeit</label>
             <input class="form-control" type ="number" step="0.01" id ="laufzeitid"  th:field= "*{laufzeit}" >
+            <small class="text-danger" th:if="${#fields.hasErrors('laufzeit')}" th:errors="*{laufzeit}">Laufzeit Error
+            </small>
             <br><br>
             <label for="zinssatzid">Zinssatz (% p.a.)</label>
             <input class="form-control" type = "number" step="0.01"  id="zinssatzid" th:field= "*{zinssatz}">
+            <small class="text-danger" th:if="${#fields.hasErrors('zinssatz')}" th:errors="*{zinssatz}">zinssatz Error
+            </small>
             <br><br><br>
             <button type="submit">Berechnen</button>
         </form>
-
         <br><br><br>
         <p>Ihr Endkapital beträgt:</p>
         <p th:text="${endkapital != null ? endkapital : '0'}">0</p>
+
     </body>
 </html>

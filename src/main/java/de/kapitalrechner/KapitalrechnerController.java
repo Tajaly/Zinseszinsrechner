@@ -22,22 +22,10 @@ public class KapitalrechnerController {
 
     @GetMapping("/submit")
     public String berechnekapital(@Valid KapitalForm kapitalForm, BindingResult bindingResult, Model model  ) {
-       // model.addAttribute("kapital", kapitalForm.getKapital() );
-       // model.addAttribute("laufzeit", kapitalForm.getLaufzeit() );
-       // model.addAttribute("zinssatz", kapitalForm.getZinssatz() );
         model.addAttribute("kapitalForm" ,kapitalForm);
         if (bindingResult.hasErrors()) {
-            return "error";
+            return "kapitalrechner";
         }
-        //TODO fehlermeldung implementieren
-
-
-
-
-
-
-
-
 
         double endkapital = kapitalForm.berechneEndkapitalMitZinseszins();
         //TODO in html mit if verarbeiten
