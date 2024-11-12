@@ -1,1 +1,1 @@
-# Zinseszinsrechner
+# Endkapital Rechner
