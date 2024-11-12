@@ -1,19 +1,18 @@
 package de.kapitalrechner;
 import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.PositiveOrZero;
 
 import static java.lang.Math.round;
 
 public class KapitalForm {
 
-    @PositiveOrZero(message = "das Feld muss eine positive Zahl enthalten!")
+    @Min(value = 0, message="Der Betrag muss größer als 0 sein!")
     private double kapital;
 
-    @PositiveOrZero(message = "das Feld muss eine positive Zahl enthalten!")
+    @Min(value=0, message="Die Laufzeit muss größer als 0 sein!")
     private double laufzeit;
 
-    @PositiveOrZero(message = "das Feld muss eine positive Zahl enthalten!")
+    @Min(value=0, message="Der Zinssatz muss größer als 0 sein!")
     private double zinssatz;
 
 
