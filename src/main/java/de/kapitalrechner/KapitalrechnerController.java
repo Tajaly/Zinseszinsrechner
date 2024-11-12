@@ -11,6 +11,11 @@ import jakarta.validation.Valid;
 @Controller
 public class KapitalrechnerController {
 
+    private Rechner rechner;
+    public KapitalrechnerController(Rechner rechner){
+        this.rechner = rechner;
+    }
+
     @GetMapping("/")
     public String startseite(Model model) {
 
@@ -28,7 +33,6 @@ public class KapitalrechnerController {
         }
 
         double endkapital = kapitalForm.berechneEndkapitalMitZinseszins();
-        //TODO in html mit if verarbeiten
         model.addAttribute("endkapital", endkapital);
         return "kapitalrechner";
     }
