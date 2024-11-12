@@ -15,6 +15,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @WebMvcTest
 public class KapitalrechnerControllerTest {
+    //TODO Funktionen der Chekboxen implementieren
+    //TODO Rundung auf zwei Nachkommastellen hinzufügen
+
     @MockBean
     Rechner rechner;
 
