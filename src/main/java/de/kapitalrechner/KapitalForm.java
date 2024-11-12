@@ -25,25 +25,6 @@ public class KapitalForm {
         this.zinssatz = zinssatz;
     }
 
-    //ohne zinsesZins
-    public double berechneZinsertrag() {
-        return this.kapital * (this.zinssatz/100) * this.laufzeit;
-    }
-
-    //ohne zinseszins
-    //Kn = K0 * ((p / 100) * n + 1)
-    public double berechneEndkapital() {
-        double endkapital = this.kapital * (((this.zinssatz/100) * this.laufzeit) + 1);
-        return round(endkapital);
-    }
-
-    //mit zinseszins
-
-    public double berechneEndkapitalMitZinseszins() {
-        double endkapital = this.kapital * Math.pow(((this.zinssatz/100) + 1) , this.laufzeit);
-        endkapital = round(endkapital);
-        return endkapital;
-    }
 
 
     public double getKapital() {
