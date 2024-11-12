@@ -1,0 +1,33 @@
+h1 {
+    font-size: 30px;
+}
+
+.parent {
+    display: flex;
+     width: 1000px;
+    font-size: 20px;
+    font-family: Arial;
+    background-color: #85b2d5;
+    flex-direction: column;
+    align-content: start;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+}
+
+.formular {
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.formchild {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    gap: 15px;
+}

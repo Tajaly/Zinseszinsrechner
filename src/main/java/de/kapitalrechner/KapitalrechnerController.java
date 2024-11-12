@@ -27,7 +27,10 @@ public class KapitalrechnerController {
             return "kapitalrechner";
         }
 
-        double endkapital = rechner.berechneEndkapitalMitZinseszins(kapitalForm);
+        String endkapital =Double.toString(rechner.berechneEndkapitalMitZinseszins(kapitalForm))
+            .replace("." , ",");
+
+
         model.addAttribute("endkapital", endkapital);
         return "kapitalrechner";
     }
